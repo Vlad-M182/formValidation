@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	
+	<form action="/" id="form" novalidate>
+		<h1>Booking number in the hotel</h1>
+
+		<fieldset class="name">
+			<legend>Name<span class="required" title="Required field">*</span></legend>
+			<div class="anim">
+				<label for="first-name">First name</label>
+				<input type="text" name="first-name" value="" id="first-name">
+				<p class="error"></p>
+			</div>
+			<div class="anim">
+				<label for="last-name">Last name</label>
+				<input type="text" name="last-name" value="" id="last-name">
+				<p class="error"></p>
+			</div>
+		</fieldset>
+
+		<fieldset class="email">
+			<legend>E-mail<span class="required" title="Required field">*</span></legend>
+			<div class="anim">
+				<label for="email">Your e-mail</label>
+				<input type="email" id="email" name="email" value="">
+				<p class="error"></p>
+			</div>
+		</fieldset>
+
+		<fieldset class="room">
+			<legend>Room Type</legend>
+			<select name="room-type" id="room-type">
+				<option value="st">Standart (1 to 2 people)</option>
+				<option value="fa">Family (3 to 5 people)</option>
+				<option value="bi">Big (5 to 8 people)</option>
+				<option value="lu">Luxury (8+ people)</option>
+			</select>
+		</fieldset>
+
+		<fieldset class="guests">
+			<legend>Number of Guests<span class="required" title="Required field">*</span></legend>
+			<input id="guests" type="number" min="1" max="15" required name="guests" value="">
+			<p class="error"></p>
+		</fieldset>
+
+		<fieldset class="arrival">
+			<legend>Arrival Date & Time<span class="required" title="Required field">*</span></legend>
+			<input id="date" type="date" required name="date" value="">
+			<input id="time" type="time" required name="time" min="00:00" max="11:59">
+			<select name="datetime" id="datetime">
+				<option value="am">AM</option>
+				<option value="pm">PM</option>
+			</select>
+			<p class="error"></p>
+		</fieldset>
+
+		<fieldset class="deperture">
+			<legend>Departure Date<span class="required" title="Required field">*</span></legend>
+			<input id="deperture" type="date" required name="deperture" value="">
+			<p class="error"></p>
+		</fieldset>
+
+		<fieldset class="pickup">
+			<legend>Free Pickup<span class="required" title="Required field">*</span></legend>
+			<p>
+				<input type="radio" required name="pickup" id="r1" value="yes"><label for="r1">Yes Please - Pick me up on arrival</label>
+			</p>
+			<p>
+				<input type="radio" required name="pickup" id="r2" value="no"><label for="r2">No Thanks - I'll make my own way there</label>
+			</p>
+			<p class="error"></p>
+		</fieldset>
+
+		<fieldset class="requests">
+			<legend>Special Requests</legend>
+			<textarea name="requests"></textarea>
+		</fieldset>
+
+		<button type="submit">Submit</button>
+
+	</form>
+
+	<script src="main.js"></script>
+</body>
+</html>
